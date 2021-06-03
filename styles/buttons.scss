@@ -1,0 +1,19 @@
+@import "mixins";
+@import "varables";
+.a-btn{
+  padding: 10px 15px;
+  font-size: 0.875rem;
+  background: none;
+  border: none;
+  transition: 300ms all;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.a-btn{
+  @each $key, $btnColor in $ButtonColors {
+    &.#{"" + $key} {
+      @include setBackgroundAndHover($btnColor, $key);
+    }
+  }
+}

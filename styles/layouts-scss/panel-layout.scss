@@ -1,0 +1,40 @@
+.panel-layout {
+  header{
+  }
+  main{
+    padding-top: 50px;
+  }
+
+  a.catalog-item, button.catalog-item, div.catalog-item {
+    display: flex;
+    flex-direction: column;
+    padding: 15px !important;
+    margin: 15px !important;
+    width: 250px;
+    .catalog-item__icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto;
+
+      img {
+        width: 100%;
+        max-width: 250px;
+        height: 200px;
+        display: block;
+        object-fit: cover;
+      }
+    }
+
+    h3 {
+      text-align: center;
+    }
+  }
+
+}
+
+.catalog-grid {
+  &.minus-margin{
+    margin: -24px;
+  }
+}

@@ -1,0 +1,90 @@
+.default-layout {
+
+  a.catalog-item, button.catalog-item, div.catalog-item {
+    display: flex;
+    flex-direction: column;
+    padding: 15px !important;
+    margin: 15px !important;
+    border-radius: 4px;
+    box-shadow: 0 3px 20px #e2e2e2;
+
+    .catalog-item__icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto;
+
+      img {
+        width: 100%;
+        max-width: 119px;
+        height: 100px;
+        min-width: 100px;
+        display: block;
+        object-fit: contain;
+      }
+    }
+
+    span {
+      margin-top: 16px;
+      font-size: 1.125rem;
+      text-align: center;
+    }
+  }
+
+  .main-page-header {
+    position: relative;
+    z-index: 1;
+    height: 588px;
+    background: url("/Rectangle.png") center center / cover;
+    padding-top: 69px;
+    &:after {
+      z-index: 1;
+      content: '';
+      background: linear-gradient(180deg, rgba(0, 70, 153, 0.72) 0%, rgba(255, 255, 255, 0) 100%);
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+    
+    &__content{
+      z-index: 2;
+      position: relative;
+      h1{
+        color: #ffffff;
+        text-transform: uppercase;
+        font-size: 88px;
+      }
+      p{
+        color: #ffffff;
+        font-size: 1rem;
+      }
+    }
+  }
+  
+  .top-panel{
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    border-bottom: 1px solid rgb(255 255 255 / 68%);
+    background-color: transparent;
+  }
+
+  .a-products-list{
+    padding: 158px 0 136px;
+    flex-wrap: wrap;
+  }
+
+  &.page{
+    .top-panel{
+      background: #4B3E5A;
+    }
+    main{
+      padding-top: calc(71px + 140px);
+    }
+  }
+}
